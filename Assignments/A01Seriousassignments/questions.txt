@@ -1,0 +1,52 @@
+Que1.
+
+1.	There is a predefined array of numbers of size 10.( 1 will think about it later why. This is not event handling)
+2.	All buttons disabled in the beginning
+3.	Event
+    a.	On blur on the textbox 
+    i.	Check the number whether it is present in the array or not
+    ii.	If present
+1.	Enable the buttons
+a.	Edit
+b.	Delete
+2.	Disable the button
+a.	Add
+b.	View all
+c.	Show odd positions.
+iii.	If not present
+1.	Enable only add button
+b.	When add button is clicked
+i.	Check in the array if number is present or not present
+ii.	If not present
+1.	Add to the array
+2.	Disable all the buttons
+iii.	If present
+1.	Don’t add to the array
+2.	Disable all buttons 
+c.	When edit button is clicked
+i.	Use a prompt function from window object which will give you a number.
+ii.	Replace the old number with the new number provided new number does not exist
+d.	When delete button is clicked
+i.	Remove the number from the array.
+e.	When view all is clicked
+i.	Show the entire array in the region Y
+f.	When we click on show odd positions in the array
+i.	Show only the numbers which are in odd position 0, 1, 3, 5,7,9
+4.	While all doing this show appropriate messages in X
+
+ ================================================================================================
+
+Que2.
+ 
+1.	Onblur
+a.	Empno
+b.	Check in the array if empno is found, if found
+i.	Modify
+ii.	Remove
+c.	If empno not found
+i.	Enable add button
+2.	….. see the first program, do similar things
+3.	When we click on deptid
+a.	Show all employees belonging to the deptid  --Y region
+b.	 In X region keep updating it with the messages
+ 

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express inbuilt http module</title>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+        $(() => {
+            $("#add").click(() => {
+
+                console.log("Add clicked.");
+                let str = "";
+                let ajaxParameters = {
+                    data: "",
+                    url: "http://localhost:900/addItem",
+                    type: 'get',
+                    dataType: "text",
+                    success: (str) => {
+                        console.log(str);
+                        $("#msg").text(str);
+                    },
+                    error: (error) => {
+                        console.log("Error from server: ", error);
+
+                    }
+                };
+                $.ajax(ajaxParameters);
+
+            });
+
+
+            $("#update").click(() => {
+
+                console.log("update clicked.");
+                let str = "";
+                let ajaxParameters = {
+                    data: "",
+                    url: "http://localhost:900/updateItem",
+                    type: 'get',
+                    // dataType: "json",
+                    dataType: "text",
+                    success: (str) => {
+                        console.log(str);
+                        $("#msg").text(str);
+                    },
+                    error: (error) => {
+                        console.log("Error from server: ", error);
+
+                    }
+                };
+                $.ajax(ajaxParameters);
+
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <h1>This is a Simple HTML Page
+
+    </h1>
+    <hr>
+    <br /><br /><button id="add">Add Item</button>
+    <button id="update">update Item</button>
+
+    <p>Status: <span id="msg"></span></p>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+Que1.
+
+	Create a table called  item with itemno integer, primary key, itemname varchar(15), price integer, category varchar(15)
+a.	Demonstrate 
+i.	Insert
+ii.	Update  -- category and price
+iii.	Multi select – query on category
+iv.	Single select  -- query on itemno. -->
+
+
+Que2.
+
+	Create a table called  resource with resource id integer, primary key, resourcename varchar(15), status boolean
+a.	Demonstrate 
+i.	Insert
+ii.	Update  -- category and price
+iii.	Multi select – query on status
+iv.	Single select  -- query on resourceid -->
+
+
+Que3.
+
+ Build a complete UI by using jquery on presentation, real server side with database where scenario is very simple, if
+we give pincode, areaname should appear.
+a. In one textbox we type pincode, when blur event occurs show the area name next to the pincode textbox. -->
+
+
+Que4.
+
+	Change the donkeys name
+a.	Build a complete UI by using jquery on presentation, real server side with database where scenario is very simple, if we give acno, balance should appear.
+b.	In one textbox we type accno, when blur event occurs show the balance, should appear  next to the acno textbox. -->

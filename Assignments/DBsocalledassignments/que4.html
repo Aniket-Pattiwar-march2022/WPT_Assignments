@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Acno-Balance</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(() => {
+            $('#acno').blur(() => {
+                let i = $('#acno');
+                let input = {
+                    acno: i.val()
+                };
+                let paramsItem = {
+                    data: input,
+                    url: "http://localhost:80/getBalance",
+                    type: "get",
+                    dataType: "json",
+                    success: (datagivenbyserver) => {
+                        console.log(
+                            "data given by server  successfuly " +
+                            datagivenbyserver.status
+                        );
+                        if (datagivenbyserver.status === true) {
+                            $("#msg").addClass('g');
+                            $("#msg").removeClass('r');
+                            $("#msg").text("Successfuly Found");
+                            $('#balance').val(datagivenbyserver.balancedetails.balance)
+                        } else {
+                            $("#msg").addClass('r');
+                            $("#msg").removeClass('g');
+                            $("#msg").text("Entered wrong acno");
+                            $('#balance').val("")
+                        }
+                    },
+                    error: (errorgivenbyserver) => {
+                        console.log(
+                            "failed to contact data " +
+                            errorgivenbyserver.status
+                        );
+                    },
+                };
+                $.ajax(paramsItem);
+            });
+        });
+    </script>
+    <style>
+        .g {
+            color: green;
+        }
+
+        .r {
+            color: crimson;
+        }
+    </style>
+</head>
+
+<body>
+    Acno : <input id="acno" name="acno" placeholder="Enter Acno">
+    Balance : <input id="balance" name="balance"><br>
+    Result Will be here : <span id="msg"></span>
+</body>
+
+</html>
